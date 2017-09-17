@@ -85,9 +85,9 @@ def main(args):
     # initialize and compile the model
     model = convnet(num_classes, image_size)
 
-    model.compile(loss='binary_crossentropy',
+    model.compile(loss='categorical_crossentropy',
                   optimizer='rmsprop',
-                  metrics=['accuracy'])
+                  metrics=['categorical_accuracy'])
 
     # Train the model
     model.fit_generator(
