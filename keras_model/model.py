@@ -3,7 +3,7 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 
 
-def lenet(num_classes, image_size):
+def convnet(num_classes, image_size):
     model = Sequential()
     model.add(Conv2D(32, (3, 3), input_shape=(image_size, image_size, 3),
                      activation='relu'))
